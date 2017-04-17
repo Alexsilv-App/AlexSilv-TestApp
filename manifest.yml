@@ -1,0 +1,10 @@
+applications:
+- path: .
+  memory: 512M
+  instances: 1
+  domain: mybluemix.net
+  name: AlexSilv-TestApp
+  host: AlexSilv-TestApp
+  disk_quota: 1024M
+  services:
+  - AlexSilv-TestApp-cloudantNoSQLDB
