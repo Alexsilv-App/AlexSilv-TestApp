@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html ng-app>
+<html lang="en" ng-app="favoritesApp">
 <head>
 	<title>Favorites Organizer powered by Cloudant</title>
 	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
@@ -7,8 +7,45 @@
 	<meta name="apple-mobile-web-app-capable" content="yes" />
 	<link rel="stylesheet" href="/style/style.css" />
 	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+	
+	<!-- Angular lib -->
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular.min.js"></script>
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.6/angular-route.min.js"></script>
+ <!-- Latest compiled and minified CSS -->
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
+ <!-- Create some padding for body -->
+ <style>
+ body {
+ min-height: 2000px;
+ padding-top: 70px;
+ }
+ </style>
+
+ <script src="app.js"></script>
+	
 </head>
 <body>
+	
+	<nav class="navbar navbar-default navbar-fixed-top">
+ <div class="container">
+ <div class="navbar-header">
+ <div class="navbar-brand" href="#/">Lista de favoritos Angular</div>
+ </div>
+ <div id="navbar" class="navbar-collapse collapse">
+ <ul class="nav navbar-nav">
+ <li class="active"><a href="#/">Home</a></li>
+ </ul>
+ </div>
+ </div>
+ </nav>
+ <!-- Dynamically render templates -->
+ <div class="container" ng-view>
+ </div>
+ </body>
+</html>
+	
+	
+	
 	    <div>
       <label>Name:</label>
       <input type="text" ng-model="yourName" placeholder="Enter a name here">
